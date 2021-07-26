@@ -1,0 +1,12 @@
+alias sudo="doas"
+alias pacman="sudo pacman"
+alias vim="nvim"
+alias smci="sudo make clean install"
+alias svim="sudo nvim"
+alias startx="startx $XINITRC"
+alias \
+	ls="ls -hN --color=auto --group-directories-first" \
+	grep="grep --color=auto" \
+	diff="diff --color=auto" \
+	ccat="highlight --out-format=ansi"
+alias startx='startx "$XDG_CONFIG_HOME/X11/xinitrc" -- -- vt1'
