@@ -35,6 +35,7 @@ chsh -s /bin/zsh
 ```
 #### Скриншот как выглядит zsh
 ![image](https://user-images.githubusercontent.com/67426242/127010119-6c03f294-1f13-467f-b4ab-8b2f50d7f2ad.png)
+
 Формат: devicename:[username]:/where/are/you$
 
 ## st
@@ -51,7 +52,8 @@ sudo make clean install
 ```
 smci
 ```
-##dmenu
+
+## dmenu
 #### скриншот как выглядит
 ![image](https://user-images.githubusercontent.com/67426242/127011296-dc780c7e-b54a-45e7-90ac-17c75f6a6ac5.png)
 Программа для запуска других программ, нечего сказать
@@ -63,7 +65,9 @@ sudo make clean install
 ```
 smci
 ```
-##dwm
+
+## dwm
+
 #### скриншоты как выглядит
 ##### с polybar*
 ![image](https://user-images.githubusercontent.com/67426242/127011665-356e876f-a5e5-4a98-a1fd-51f6e8d8889e.png)
