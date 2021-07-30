@@ -10,8 +10,9 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 HISTFILE=~/.cache/zsh/history
 
-source ~/build/tnkv-dotfiles/zsh/aliasrc
-source ~/build/tnkv-dotfiles/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/build/tnkv-dotfiles/zsh-tnkv/aliasrc
+source ~/build/tnkv-dotfiles/zsh-tnkv/sh-autosuggestions/zsh-autosuggestions.zsh
+source ~/build/tnkv-dotfiles/zsh-tnkv/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Basic auto/tab complete:
 autoload -U compinit
@@ -39,4 +40,4 @@ echo -ne '\e[5 q' # Use beam shape cursor on startup.
 preexec() { echo -ne '\e[5 q' ;} # Use beam shape cursor for each new prompt.
 
 # Load syntax highlighting; should be last.
-source ~/build/tnkv-dotfiles/zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
+source /usr/share/zsh/plugins/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh 2>/dev/null
