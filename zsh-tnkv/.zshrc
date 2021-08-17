@@ -8,7 +8,6 @@ setopt interactive_comments
 # History in cache directory:
 HISTSIZE=10000000
 SAVEHIST=10000000
-HISTFILE=~/.cache/zsh/history
 
 source ~/build/tnkv-dotfiles/zsh-tnkv/aliasrc
 source ~/build/tnkv-dotfiles/zsh-tnkv/sh-autosuggestions/zsh-autosuggestions.zsh
