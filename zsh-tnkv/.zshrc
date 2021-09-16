@@ -10,7 +10,7 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 
 source ~/build/tnkv-dotfiles/zsh-tnkv/aliasrc
-source ~/build/tnkv-dotfiles/zsh-tnkv/sh-autosuggestions/zsh-autosuggestions.zsh
+source ~/build/tnkv-dotfiles/zsh-tnkv/zsh-autosuggestions/zsh-autosuggestions.zsh
 source ~/build/tnkv-dotfiles/zsh-tnkv/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Basic auto/tab complete:
