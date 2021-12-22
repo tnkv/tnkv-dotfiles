@@ -15,8 +15,8 @@ static const int usealtbar          = 1;        /* 1 means use non-dwm status ba
 static const char *altbarclass      = "Polybar"; /* Alternate bar class name */
 static const char *alttrayname      = "tray";    /* Polybar tray instance name */
 static const char *altbarcmd        = "$XDG_CONFIG_HOME/polybar/launch.sh"; /* Alternate bar launch command */
-static const char *fonts[]          = { "Hermit:size=10", "FontAwesome:size=10" };
-static const char dmenufont[]       = "Hermit:size=10";
+static const char *fonts[]          = { "JetBrainsMono Nerd Font:size=10", "FontAwesome:size=10" };
+static const char dmenufont[]       = "JetBrainsMono Nerd Font:size=9.2";
 static char norm_bg[] = "#2E3440";
 static char norm_border[] = "#3B4252";
 static char norm_fg[] = "#FFFFFF";
@@ -59,6 +59,7 @@ static const Layout layouts[] = {
 };
 
 /* key definitions */
+#define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 #define MODKEY Mod4Mask
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
@@ -79,7 +80,7 @@ static Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY,    		        XK_v,      spawn,          {.v = termcmd } },
-        { MODKEY,                       XK_c,      spawn,          {.v = screenshot } },
+        { MODKEY,                       XK_c,      spawn,          SHCMD("maim -s -u | tee -a /home/tnkv/screenshoots/$(date +\"%y_%m_%d_%T\").png | xclip -sel c -t image/png -i") },
         { MODKEY,                       XK_x,      spawn,          {.v = xkill } },
 	{ MODKEY,                       XK_n,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
@@ -121,7 +122,7 @@ static Key keys[] = {
 	//TAGKEYS(                        XK_7,                      6)
 	//TAGKEYS(                        XK_8,                      7)
 	//TAGKEYS(                        XK_9,                      8)
-	{ MODKEY,                       XK_q,      quit,           {0} },
+	{ MODKEY|ControlMask,           XK_q,      quit,           {0} },
 };
 
 /* button definitions */

@@ -7,8 +7,8 @@ screenchange-reload = true
 ;pseudo-transparency = false
 
 [global/wm]
-margin-top = 0
-margin-bottom = 0
+margin-top = 2
+margin-bottom = 2
 
 [colors]
 bg = #2E3440
@@ -32,12 +32,11 @@ semi-trans-black = #aa000000
 
 [bar/main]
 monitor = ${env:MONITOR:}
-monitor-fallback = eDP1
 monitor-strict = false
 width = 100%
 height = 27
-offset-x = 5
-offset-y = 5
+offset-x = 2
+offset-y = 2
 radius = 6.0
 fixed-center = false
 
@@ -56,7 +55,7 @@ font-2 = Font Awesome 5 Free Solid:size=9;2
 font-3 = Font Awesome 5 Brands:size=9;2
 
 modules-left = dwm
-modules-right = memory cpu pulseaudio date 
+modules-right = memory keyboard cpu pulseaudio date 
 
 tray-position = right
 tray-padding = 2
@@ -156,6 +155,23 @@ format-background = ${colors.bg-alt}
 format-underline = ${colors.bg}
 format-overline = ${colors.bg}
 
+[module/keyboard]
+type          = internal/xkeyboard
+format        = <label-layout>
+label-lang = %icon%
+lang-icon-0 = US;EN
+lang-icon-1 = RU;RU
+
+format-prefix = "" 
+font-prefix-font = 6
+format-prefix-padding-right = 1
+format-prefix-foreground = ${colors.red}
+
+format-padding = 1
+format-background = ${colors.bg-alt}
+format-underline = ${colors.bg}
+format-overline = ${colors.bg}
+
 
 [module/cpu]
 type = internal/cpu
@@ -169,54 +185,18 @@ font-prefix-font = 6
 format-prefix-padding-right = 1
 format-prefix-foreground = ${colors.blue}
 
+format-margin = 1
 format-padding = 1
 format-background = ${colors.bg-alt}
 format-underline = ${colors.bg}
 format-overline = ${colors.bg}
 
 
-[module/wlan]
-type = internal/network
-interface = wlp2s0
-interval = 3.0
-ping-interval = 3.0
-
-label-connected = %essid%: %local_ip%
-label-connected-foreground = ${colors.fg}
-
-label-packetloss = %essid%: %local_ip%
-label-packetloss-foreground = ${colors.fg}
-
-label-disconnected =
-
-format-connected-prefix = 
-format-connected-prefix-font = 6
-format-connected-prefix-padding-right = 1
-format-connected-prefix-foreground = ${colors.red}
-
-format-connected = <label-connected>
-format-connected-padding = 1
-format-connected-margin = 1
-format-connected-underline = ${colors.bg}
-format-connected-overline = ${colors.bg}
-format-connected-background = ${colors.bg-alt}
-
-format-packetloss-prefix = 
-format-packetloss-prefix-font = 6
-format-packetloss-prefix-padding-right = 1
-format-packetloss-prefix-foreground = ${colors.icon}
-
-format-packetloss = <label-connected>
-format-packetloss-padding = 1
-format-packetloss-margin = 1
-format-packetloss-underline = ${colors.bg}
-format-packetloss-overline = ${colors.bg}
-format-packetloss-background = ${colors.bg-alt}
 
 [module/pulseaudio]
 type = internal/pulseaudio
 
-ramp-volume-0 = 
+ramp-volume-0 =  
 ramp-volume-1 = 
 ramp-volume-2 = 
 
@@ -229,7 +209,7 @@ label-volume-foreground = ${colors.fg}
 
 format-volume = <ramp-volume><label-volume>
 format-volume-padding = 1
-format-volume-margin = 1
+format-volume-margin = 0
 format-volume-background = ${colors.bg-alt}
 format-volume-overline = ${colors.bg}
 format-volume-underline = ${colors.bg}
@@ -241,7 +221,7 @@ format-muted-prefix-padding-right = 1
 format-muted-prefix-foreground = ${colors.red}
 
 format-muted-padding = 1
-format-muted-margin = 1
+format-muted-margin = 0
 format-muted-foreground = ${colors.red}
 format-muted-background = ${colors.bg-alt}
 format-muted-overline = ${colors.bg}
@@ -250,12 +230,12 @@ format-muted-underline = ${colors.bg}
 [module/date]
 type = internal/date
 date = "%a %d-%m-%Y"
-time = %H:%M
-interval = 5
+time = %H:%M:%S
+interval = 1
 
 label = %date% %time%
 
-format-prefix = ""
+format-prefix = ""
 format-prefix-font = 6
 format-prefix-padding-right = 1
 format-prefix-padding-left = 0
@@ -264,5 +244,5 @@ format-padding = 1
 format-margin = 1
 format-underline = ${colors.bg}
 format-overline = ${colors.bg}
-format-prefix-foreground = ${colors.cyan}
+format-prefix-foreground = ${colors.green}
 format-background = ${colors.bg-alt}

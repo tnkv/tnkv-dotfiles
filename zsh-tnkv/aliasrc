@@ -1,8 +1,8 @@
 alias pacman="sudo pacman"
+alias cat="bat --theme=Nord"
 alias smci="sudo make clean install"
 alias \
 	ls=" lsd --color=always -X" \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"
-
