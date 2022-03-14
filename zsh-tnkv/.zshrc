@@ -1,17 +1,18 @@
 # Enable colors and change prompt:
 autoload -U colors && colors	# Load colors
 PROMPT="%B%F{green}%m%f%b%F{white}:%f%F{red}[%f%B%F{blue}%n%f%b%F{red}]%f%F{red}:%f%F{magenta}%~%B$%b%b%f "
-setopt autocd		# Automatically cd into typed directory.
+#setopt autocd		# Automatically cd into typed directory.
 stty stop undef		# Disable ctrl-s to freeze terminal.
 setopt interactive_comments
 
 # History in cache directory:
 HISTSIZE=10000000
 SAVEHIST=10000000
+HISTFILE=~/.cache/zsh/history
 
-source ~/build/tnkv-dotfiles/zsh-tnkv/aliasrc
-source ~/build/tnkv-dotfiles/zsh-tnkv/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/build/tnkv-dotfiles/zsh-tnkv/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source /etc/aliasrc
+source ~/build/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/build/zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Basic auto/tab complete:
 autoload -U compinit

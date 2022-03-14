@@ -50,12 +50,12 @@ line-color = ${colors.purple}
 padding-right = 2
 
 font-0 = JetBrainsMono:size=9;2
-font-1 = Font Awesome 5 Free:size=9;2
-font-2 = Font Awesome 5 Free Solid:size=9;2
-font-3 = Font Awesome 5 Brands:size=9;2
+font-1 = Font Awesome 6 Free:size=9;2
+font-2 = Font Awesome 6 Free Solid:size=9;2
+font-3 = Font Awesome 6 Brands:size=9;2
 
 modules-left = dwm
-modules-right = memory keyboard cpu pulseaudio date 
+modules-right = memory battery keyboard cpu pulseaudio date 
 
 tray-position = right
 tray-padding = 2
@@ -67,7 +67,7 @@ cursor-scroll = ns-resize
 
 [module/dwm]
 type = internal/dwm
-format = <label-tags> <label-layout> <label-floating> <label-title>
+format = <label-tags> <label-layout> <label-floating> <lablel-title>
 ;socket-path = /tmp/dwm.sock
 
 enable-tags-click = true
@@ -145,15 +145,82 @@ interval = 2
 label = %percentage_used%%
 label-foreground = ${colors.fg}
 
-format-prefix = "MEM: "
+format-prefix = 
 format-prefix-font = 1
 format-prefix-foreground = ${colors.purple}
+format-prefix-padding-right = 1
 
 format-padding = 1
-format-margin = 1
+format-margin = 0
 format-background = ${colors.bg-alt}
 format-underline = ${colors.bg}
 format-overline = ${colors.bg}
+
+
+
+
+[module/battery]
+type = internal/battery
+
+;full-at = 99
+;low-at = 5
+
+battery = BAT0
+adapter = AC
+
+time-format = %H:%M
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+
+format-charging-padding = 1
+format-charging-margin = 1
+format-charging-background = ${colors.bg-alt}
+format-charging-overline = ${colors.bg}
+format-charging-underline = ${colors.bg}
+
+format-discharging-padding = 1
+format-discharging-margin = 1
+format-discharging-background = ${colors.bg-alt}
+format-discharging-overline = ${colors.bg}
+format-discharging-underline = ${colors.bg}
+
+
+label-charging = %percentage%%
+label-charging-foreground = ${colors.fg}
+
+
+
+label-discharging = %percentage%%
+label-discharging-foreground = ${colors.fg}
+
+
+label-full = %percentage%%
+
+; Only applies if <ramp-capacity> is used
+ramp-capacity-0 = 
+ramp-capacity-1 = 
+ramp-capacity-2 = 
+ramp-capacity-3 = 
+ramp-capacity-4 = 
+
+ramp-capacity-foreground = ${colors.yellow}
+ramp-capacity-font = 6
+ramp-capacity-padding-right = 0
+
+; Only applies if <animation-charging> is used
+animation-charging-0 = 
+animation-charging-1 = 
+animation-charging-2 = 
+animation-charging-3 = 
+animation-charging-4 = 
+; Framerate in milliseconds
+animation-charging-framerate = 750
+
+animation-charging-foreground = ${colors.yellow}
+animation-charging-font = 6
+animation-charging-padding-right = 0
+
 
 [module/keyboard]
 type          = internal/xkeyboard
@@ -177,10 +244,10 @@ format-overline = ${colors.bg}
 type = internal/cpu
 interval = 1
 
-label = %percentage:2%%
+label = %percentage:1%%
 label-foreground = ${colors.fg}
 
-format-prefix = "CPU:" 
+format-prefix = "" 
 font-prefix-font = 6
 format-prefix-padding-right = 1
 format-prefix-foreground = ${colors.blue}
@@ -196,7 +263,7 @@ format-overline = ${colors.bg}
 [module/pulseaudio]
 type = internal/pulseaudio
 
-ramp-volume-0 =  
+ramp-volume-0 = 
 ramp-volume-1 = 
 ramp-volume-2 = 
 
