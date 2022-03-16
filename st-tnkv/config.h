@@ -128,7 +128,7 @@ float alpha = 0.98;
  	[255] = 0,
  
  	/* more colors can be added after 255 to use with DefaultXX */
- 	"#434c5e", /* background */
+ 	"#2e3440", /* background */
  	"#d8dee9", /* foreground */
  };
  
