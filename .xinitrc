@@ -1,6 +1,6 @@
-xrandr --output VGA1 --right-of LVDS1
-xcompmgr &
-xwallpaper --zoom /home/tnkv/Wallpaper/The_Lake_5.jpg
+~/.screenlayout/screen.sh
+picom --daemon
+xwallpaper --zoom /home/tnkv/build/tnkv-dotfiles/wallpaper.jpg
 eval $(gnome-keyring-daemon --start)
 export SSH_AUTH_SOCK
 exec dwm

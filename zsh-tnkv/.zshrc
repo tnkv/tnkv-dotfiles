@@ -10,9 +10,9 @@ HISTSIZE=10000000
 SAVEHIST=10000000
 HISTFILE=~/.cache/zsh/history
 
-source /etc/aliasrc
-source ~/build/zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
-source ~/build/zsh/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
+source ~/build/tnkv-dotfiles/zsh-tnkv/aliasrc
+source ~/build/tnkv-dotfiles/zsh-tnkv/zsh-autosuggestions/zsh-autosuggestions.zsh
+source ~/build/tnkv-dotfiles/zsh-tnkv/fast-syntax-highlighting/fast-syntax-highlighting.plugin.zsh
 
 # Basic auto/tab complete:
 autoload -U compinit

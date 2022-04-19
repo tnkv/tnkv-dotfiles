@@ -32,6 +32,7 @@ semi-trans-black = #aa000000
 
 [bar/main]
 monitor = ${env:MONITOR:}
+monitor-fallback = eDP1
 monitor-strict = false
 width = 100%
 height = 27
@@ -50,11 +51,12 @@ line-color = ${colors.purple}
 padding-right = 2
 
 font-0 = JetBrainsMono:size=9;2
-font-1 = Font Awesome 6 Free:size=9;2
-font-2 = Font Awesome 6 Free Solid:size=9;2
-font-3 = Font Awesome 6 Brands:size=9;2
+font-1 = Apple Color Emoji:style=Regular:scale=10
+font-2 = Font Awesome 6 Free:size=9;2
+font-3 = Font Awesome 6 Free Solid:size=9;2
+font-4 = Font Awesome 6 Brands:size=9;2
 
-modules-left = dwm
+modules-left = dwm title
 modules-right = memory battery keyboard cpu pulseaudio date 
 
 tray-position = right
@@ -89,9 +91,10 @@ secondary-layout-symbol = [M]
 
 label-floating = F
 
-label-title = %title%
+label-title = %{module-title}
 label-title-maxlen = 35
 label-title-padding = 1
+label-title-default = "Desktop"
 label-title-foreground = ${colors.fg}
 label-title-background = ${colors.bg}
 
