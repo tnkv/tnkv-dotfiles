@@ -1,6 +1,6 @@
 alias vim="nvim"
 alias svim="sudo nvim"
-alias pacman="sudo pacman"
+alias dnf="sudo dnf"
 alias cat="bat --theme=Nord"
 alias smci="sudo make clean install"
 alias \
