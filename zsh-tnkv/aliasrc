@@ -8,5 +8,5 @@ alias \
 	grep="grep --color=auto" \
 	diff="diff --color=auto" \
 	ccat="highlight --out-format=ansi"
-alias неофеч=neofetch
-alias "neofetch"="neofetch --source /home/tnkv/build/Linux-Ascii/tf.txt"
+alias "rsync"="rsync -avcrP"
+alias "cd"="z"
