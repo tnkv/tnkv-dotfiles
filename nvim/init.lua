@@ -8,7 +8,7 @@ async =
             require "pluginList"
             require "plugins.bufferline"
             require("utils").hideStuff()
-
+	    require("mason").setup()
             async:close()
         end
     )

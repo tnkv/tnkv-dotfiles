@@ -55,18 +55,9 @@ return packer.startup(
         }
 
 	use {
-            "williamboman/nvim-lsp-installer",
-	    config = function()
-		    require "plugins.lspinstall"
-	    end
+            "williamboman/mason.nvim",
     	}
 
-        use {
-            "neovim/nvim-lspconfig",
-            config = function()
-                require "plugins.lspconfig"
-            end
-        }
 
         use {
             "onsails/lspkind-nvim",
