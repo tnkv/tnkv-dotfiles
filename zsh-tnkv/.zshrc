@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-source $HOME/build/tnkv-dotfiles/zsh-tnkv/aliasrc
+source /home/tnkv/build/tnkv-dotfiles/zsh-tnkv/aliasrc
 ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
@@ -71,7 +71,7 @@ ZSH_THEME="agnoster"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git fast-syntax-highlighting python command-not-found zsh-autosuggestions)
+plugins=(git fast-syntax-highlighting python command-not-found zsh-autosuggestions colors)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,3 +99,7 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
+alias tb='nc termbin.com 9999'
+
+___MY_VMOPTIONS_SHELL_FILE="${HOME}/.jetbrains.vmoptions.sh"; if [ -f "${___MY_VMOPTIONS_SHELL_FILE}" ]; then . "${___MY_VMOPTIONS_SHELL_FILE}"; fi
+eval "$(zoxide init zsh)"
