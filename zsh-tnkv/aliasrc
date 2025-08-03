@@ -1,12 +1,10 @@
 alias vim="nvim"
 alias svim="sudo nvim"
 alias dnf="sudo dnf"
-alias cat="bat --theme=Nord"
 alias smci="sudo make clean install"
-alias \
-	ls=" lsd --color=always -X" \
-	grep="grep --color=auto" \
-	diff="diff --color=auto" \
-	ccat="highlight --out-format=ansi"
-alias "rsync"="rsync -avcrP"
-alias "cd"="z"
+alias grep="grep --color=auto"
+alias diff="diff --color=auto"
+alias ccat="highlight --out-format=ansi"
+alias rsync="rsync -avcrP"
+alias cd="z"
+alias tb="nc termbin.com 9999"
